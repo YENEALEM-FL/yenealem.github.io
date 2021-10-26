@@ -1,9 +1,7 @@
-h4{
+h5{
     color: #AAADAF;
 }
-h2{
-    color: #95989A;
-}
+
 p{
     color: black;
     font: 1em sans-serif;
@@ -25,7 +23,10 @@ font{
 	color:green;
     }
 hr{
-    width:100%;
+    width:300px;
     color:blue;
     size:5px;
+}
+i{
+    color: green;
 }
