@@ -19,6 +19,16 @@ hr.splitLine1{
 p.my_comment{
     font: italic 20px Serif;
 }
+
+
+span{
+ color: yellow;
+}
+footer{
+
+margin-top: 100px;
+column-count:2 ;
+}
 font{
 	color:green;
     }

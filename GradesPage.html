@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+<title> my page</title>
+
+<link href="GradeRegistrationStyle.css"  rel="stylesheet"/>
+
+</head>
+<body>
+    <form method="post" action="http://mumstudents.org/params.php">
+        <h3> Grade submission form</h3>
+        <table>
+            <tr> <td>Student's Name:</td> <td><input type="text" name="sname" size=30></td> </tr>
+
+            <tr><td>Student's Id:</td><td><input type="text" name="sid"size=15></td></tr>
+
+            <tr><td>Student's Assignment:</td> 
+            <td><select name="assignment">
+           <option value="Lab01">Lab01</option>
+            <option value="Lab02">Lab02</option>
+            <option value="Lab03">Lab03</option>
+            <option value="Lab04">Lab04</option>
+            <option value="Lab05">Lab05</option>
+            <option value="Lab06">Lab06</option>
+            <option value="Lab07">Lab07</option>
+            <option value="Lab08">Lab08</option>
+            <option value="Lab09">Lab09</option>
+            <option value="Lab010">Lab010</option>
+            <option value="Lab011">Lab011</option>
+            <option value="Final project">Final project</option>
+            </select></td></tr>
+        <tr><td>Student Entry:</td>
+        <td><input type="radio" name="student entry"> February entry
+        <input type="radio" name="student entry"> May entry
+        <input type="radio" name="student entry"> August entry
+        <input type="radio" name="student entry"> November entry
+        </td>
+        <tr>
+        <td colspan="2"><input type="checkbox" name="pledge"> I pledge that the whole information I fed is correct.</td></tr>
+        </table>
+        <input type="submit">
+    </form>
