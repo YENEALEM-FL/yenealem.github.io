@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--
+	CSE 190M, Summer 2012
+	This file is a tip calculator page using JavaScript.
+	-->
+<script>
+function calcTip() {
+
+
+	    var first_number = parseFloat(document.getElementById('subtotal').value);
+            var second_number = parseFloat(document.getElementById('tip').value);
+            var total= parseFloat(first_number) + parseFloat(second_number);
+	    document.getElementById('total').textContent = "$"+total;
+
+}
+
+</script type="text/javascript">
+	
+		<title>Tip_Calculator</title>
+		
+	</head>
+
+
+	<body>
+		<h1>
+			<img id="logo" src="images/calc.jpg" alt="++--**//" />
+			  Tip Calculator
+		</h1>
+
+		<div>
+			<label><input id="subtotal" type="text" /> $ Subtotal</label>
+		</div>
+
+		<br>
+		<div>
+			<label><input id="tip" type="text" /> % Tip</label>
+		</div>
+		<br>
+		<div>
+			<button id="btn"  onclick="calcTip();" />Calculate Tip</button>
+		</div>
+
+		<hr />
+
+		<div>
+			<h2>Your total:</h2>
+			<p id="total">$0.00</p>
+		</div>
+
+
+<footer>
+
+<div>
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fyenealem-fl.github.io%2Fyenealem.github.io%2FRecipe">
+<img alt="validator-1" src="https://manalabs.org/img/w3c-html.png"></a>
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fyenealem-fl.github.io%252Fyenealem.github.io%252FRecipe&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+<img alt="validator-2" src="https://manalabs.org/img/w3c-css.png"></a>
+</div>
+</footer>
+
+</body>
+
+</html>
