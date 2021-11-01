@@ -1,0 +1,21 @@
+1. 
+Both are valid timeout setting options. The second way is very helpful as it helps to pass parameter to the called function.
+
+2. 
+Both approaches have identical value which is 6.
+
+3.
+
+function booyah1(){
+ alert("BOOYAH!");
+}
+
+function booyah2(){
+ alert("BOOYAH!");
+}
+
+THe timeouts are set as SetTimeout(booyah1,2000) and SetTimeout(booyah2(),2000).
+
+4.
+When JavaScript code is separately stored and treated, it is considered as obturisive Javascript. THe script is not integrated directly with HTML code directly. Thus, it helps to maintain and manage application development impacting separation of concern of  our web development environment.
+
