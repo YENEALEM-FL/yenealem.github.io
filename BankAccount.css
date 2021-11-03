@@ -1,0 +1,22 @@
+
+
+h1{
+	font-size:24px;
+	color:black;
+	font-style:italic;
+}
+
+h4{
+	font-size:15px;
+	color:black;
+	align:right;
+}
+
+button{
+	font-weight:bold;
+	}
+
+textarea{
+	width:300px;
+	height:150px;
+	}

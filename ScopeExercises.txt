@@ -1,0 +1,46 @@
+1.
+	
+	document.write(x) - > 10
+	document.write(a) - > 8
+
+	document.write(b) - > 8
+
+	document.write(b) - > 10
+
+	document.write(b) - > 10
+
+	document.write(x) - > undefined
+2.
+	Methods are accessed through objects whereas functions can be accessed directly.
+
+3.
+	'this' means current object.
+4.
+	'this' means current object or element in logical part of a program. It refers context of the object.
+
+5.
+	'this' means the current object or element which is ready to accept a new value.
+6.
+	'this' refers the object that is created and being served in the context of the function (f()). 
+7.
+	a free variable is a global variable that uses as input for other functions. 
+8.
+	const art = { name : "fred", major : "music", functionValue : function(one , two){ (one < two)? one:(one == two)? one*one: two}}
+ 
+9.
+	const employee1 = new Object();
+	const employee2 = new Object();
+	const employee3 = new Object();
+10.
+	var prod=1;
+	
+	function multiplier(arg1, arg2, arg3, . . ., argN){
+		for(let i=0;i<arguments.length;i++){
+			prod*=arguments[i];
+		}
+	}
+11.
+	var maximumValue=(a,b,c) = >{
+			return Math.max(a,b,c);
+			}
+		
