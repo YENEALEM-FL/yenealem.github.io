@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> timer exercise</title>
+<head>
+<h1> timer exercise</h1>
+
 1. 
-Both are valid timeout setting options. The second way is very helpful as it helps to pass parameter to the called function.
+Both are valid timeout setting options. The second way is very helpful as it helps to pass parameter to the called function; and it also runs without expecting timer function.
 
 2. 
 Both approaches have identical value which is 6.
