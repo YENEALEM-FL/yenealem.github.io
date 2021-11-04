@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title> this page</title>
+<link href="test.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div class="positioner">
+<div class="center">
+this is may page.
+<script>
+var pattern = new Image();
+pattern.src = "united_kingdom.png";
+var ph = pattern.height;
+    
+function animate()
+{
+   setInterval(drawShape, 500);
+}
+         
+function drawShape()
+{
+   var canvas = document.getElementById('mycanvas');
+   var ctx = canvas.getContext('2d');
+   var iw = pattern.width;
+   var ih = pattern.height;
+   ctx.clearRect(0, 0, 400, 400);
+
+   if(ph <= 0)
+   {
+      ph = ih;
+   }
+   else
+   {
+      ph -= 20;
+   }
+
+   for(var x = 0; x < iw; x++)
+   {
+      // 8 = height of wave, 20 = frequency, 38 = vertical offset
+      var y = 8 * Math.sin((x + ph)/20) + 38;
+      ctx.drawImage(pattern, x, 0, 1, ih, x, y, 1, ih);
+   }
+}
+</script>
+
+The behavior could be thought of as a minimum gutter, as if the gutter is bigger somehow (because of something like justify-content: space-between;) then the gap will only take effect if that space would end up smaller.
+
+It is not exclusively for flexbox, gap works in grid and multi-column layout as well.
+
+</div></div>
+</body>
+</html>
