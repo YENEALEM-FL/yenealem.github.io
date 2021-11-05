@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> modulo exercise</title>
+</head>
+<bidy>
+<h1> Answer for Module Exercise</h1>
+<ol>
+
+<li> undefined 8 8 9 10 1
+
+<li> Global scope is defined outside of all the functions, and can be seen inside functions and local scope is the scope inside functions.
+
+<li>
+<pre>
+<ol type="a">
+<li> No, because the variables declared in B or C are local and are not visible in the outer environment.
+
+  <li>  Yes, because the variables declared in the outer environment of the scope B are global, so they are visible inside of B, meaning that you can access them.
+
+  <li>  No, because the variables inside of scope C are local and can be visible inside of C.
+
+   <li>  Yes, because all the scopes inside functions have access in the outer environment’s variables.
+
+<li> Yes, because you can access the outer environment variables.
+</ol>
+
+
+<li> 81 and 25
+
+<li> 10
+
+<li>
+<pre>
+ var add = (function() {
+                var counter = 0;
+                return function() {
+                    return counter += 1;
+                }
+            })();
+
+        var count = (function() {
+            let counter = 0;
+            
+            let add = function() {
+                counter += 1;
+            }
+            
+            let reset = function() {
+                counter = 0;
+            }
+            
+            return {
+                add: add,
+                reset: reset
+            }
+            
+        })();
+</pre>
+     
+<li> Free variables are variables that are not inside of the context of the function closure but are variables that are visible inside of the function closure.
+
+<li>
+<pre>
+	 add5 = make_adder(5);
+            add5();
+            add5();
+            add5();
+            // final counter value is 15
+            add7 = make_adder(7);
+            add7();
+            add7();
+            add7();
+            // final counter value is 21
+
+	    var make_adder = (function(inc) {
+            var counter = 0;
+            return function() {
+                counter += inc;
+                return counter;
+            }
+        })();
+</pre>
+    
+<li> You can remove all of them using the module pattern, so they are not going to be in the global namespace anymore.
+
+<li> <pre>
+ 	Private Field: name
+        Private Field: age
+        Private Field: salary
+        Public Method: setAge(newAge)
+        Public Method: setSalary(newSalary)
+        Public Method: setName(newName)
+        Private Method: getAge( )
+        Private Method: getSalary( )
+        Private Method: getName( )
+        Public Method: increaseSalary(percentage)
+        // uses private getSalary( )
+        Public Method: incrementAge( )
+        // uses private getAge( )
+
+    var Employee = (function() {
+        let name, age, salary;
+
+        let setAge = function(a) {
+            age = a;
+        }
+
+        let setName = function(n) {
+            name = n;
+        }
+
+        let setSalary = function(s) {
+            salary = s;
+        }
+
+        let getAge = function() {
+            return age;
+        }
+        let getName = function() {
+            return name;
+        }
+        let getSalary = function() {
+            return salary;
+        }
+        let increaseSalary = function(percentage) {
+            setSalary(getSalary + (getSalary() * percentage / 100));
+        }
+        let incrementAge = function(inc) {
+            setAge(getAge() + inc);
+        }
+        return {
+            setAge: setAge,
+            setSalary: setSalary,
+            setName: setName,
+            increaseSalary: increaseSalary,
+            incrementAge: incrementAge
+        }
+    })();
+</pre>
+    
+<li>
+<pre>
+	var Employee = (function() {
+        let name, age, salary;
+
+        let getAge = function() {
+            return age;
+        }
+        let getName = function() {
+            return name;
+        }
+        let getSalary = function() {
+            return salary;
+        }
+
+        return {
+            setAge: function(a) {
+                age = a;
+            },
+            setSalary: function(s) {
+                salary = s;
+            },
+            setName: = function(n) {
+                name = n;
+            },
+            increaseSalary: function(percentage) {
+                setSalary(getSalary + (getSalary() * percentage / 100));
+            },
+            incrementAge: function(inc) {
+                setAge(getAge() + inc);
+            }
+
+        }
+    })();
+</pre>
+      
+<li>
+<pre>
+        var Employee = (function() {
+        let name, age, salary;
+
+        var emp = {};
+
+        emp.setAge = function(a) {
+            age = a;
+        }
+        emp.setName = function(n) {
+            name = n;
+        }
+        emp.setSalary = function(s) {
+            salary = s;
+        }
+
+        let getAge = function() {
+            return age;
+        }
+        let getName = function() {
+            return name;
+        }
+        let getSalary = function() {
+            return salary;
+        }
+        emp.increaseSalary = function(percentage) {
+            setSalary(getSalary + (getSalary() * percentage / 100));
+        }
+        emp.incrementAge = function(inc) {
+            setAge(getAge() + inc);
+        }
+        return emp;
+
+    })();
+</pre>
+   
+<li>
+<pre>
+    Employee.address = “North st”;
+    Employee.setAddress = function(a) {
+        this.address = a;
+    }
+    Employee.getAddress = function() {
+        return this.address;
+    }
+</pre>
+        
+<li> It’s going to execute the promise and return an alert with “Error: Hattori”
+
+<li> It’s going to show an alert with “Success Hattori” and Once the promise has settled, it cannot be changed. 
+    Rejecting it after 500 mili seconds will not show an alert with “Error: Yoshi” because it will ot effect the event handler.
+
+<li>
+<pre>
+    success
+    error
+    Error caught
+</pre>
+</ol>
+</body>
+</html>
