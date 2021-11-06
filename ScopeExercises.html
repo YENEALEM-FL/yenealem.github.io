@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> scope exercise</title>
+</head>
+<body>
+<h1> scope exercise</h1>
+<ol>
+<li>
+<pre>
+	document.write(x) - > 10
+	document.write(a) - > 8
+
+	document.write(b) - > 8
+
+	document.write(b) - > 10
+
+	document.write(b) - > 10
+
+	document.write(x) - > undefined
+</pre>
+<li>
+	Methods are accessed through objects whereas functions can be accessed directly.
+
+<li>
+	'this' means current object.
+<li>
+	'this' means current object or element in logical part of a program. It refers context of the object.
+
+<li>
+	'this' means the current object or element which is ready to accept a new value.
+<li>
+	'this' refers the object that is created and being served in the context of the function (f()). 
+<li>
+	a free variable is a global variable that uses as input for other functions. 
+<li>
+<pre>
+	const art = { name : "fred", major : "music", functionValue : function(one , two){ (one < two)? one:(one == two)? one*one: two}}
+</pre>
+ 
+<li>
+<pre>
+	const employee1 = new Object();
+	const employee2 = new Object();
+	const employee3 = new Object();
+</pre>
+<li>
+<pre>
+	var prod=1;
+	
+	function multiplier(arg1, arg2, arg3, . . ., argN){
+		for(let i=0;i<arguments.length;i++){
+			prod*=arguments[i];
+		}
+	}
+</pre>
+<li>
+<pre>
+	var maximumValue=(a,b,c) = >{
+			return Math.max(a,b,c);
+			}
+</pre>
+<ol>
+</body>
+</html>
+		
