@@ -1,0 +1,39 @@
+ QUIZ - III
+===========
+
+1.
+
+$(document).ready(function(){
+  $("p").click(function(){
+	var content=$("p:first").text();    
+    $("p:nth-child(3)").text(content);
+	});
+
+2.
+
+$(document).ready(function(){
+	$("ul > li[data-level=2]").each(function() {
+    		var current = $('li').css("background-color","red");
+	});
+	});
+
+3.
+
+$(document).ready(function(){
+	$("li:lt(2)").css( "background-color", "blue" ); 
+	});
+
+
+4.
+
+$(document).ready(function(){
+	$(".turkey").replaceWith( "Mashed Potato" );// fourth question
+	});
+
+5.
+
+$(document).ready(function(){
+	$(document).ready(function(){
+ 		 $("li span").parents().css({"color": "green"});
+		});
+	});
