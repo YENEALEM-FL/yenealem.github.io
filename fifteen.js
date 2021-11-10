@@ -1,7 +1,8 @@
 "use strict";
 
 $(document).ready(function () {
-  
+  let rows = 4;
+  let columns = 4;
   let empty_x = 3;
   let empty_y = 3;
   init();
@@ -9,8 +10,8 @@ $(document).ready(function () {
 
   function init() {
     var num = 1;
-    for (var i = 0; i < rows_columns; i++) {
-      for (var j = 0; j < rows_columns; j++) {
+    for (var i = 0; i < rows; i++) {
+      for (var j = 0; j < columns; j++) {
         let content = num++;
         var tile = document.createElement("div");
         tile.classList.add("puzzlepiece");
