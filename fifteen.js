@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   let rows = 4;
-  let columns = 4;
+  let columns = rows;
   let empty_x = 3;
   let empty_y = 3;
   init();
