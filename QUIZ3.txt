@@ -12,7 +12,7 @@ $(document).ready(function(){
 2.
 
 $(document).ready(function(){
-	$("ul > li[data-level=2]").each(function() {
+	$("ul > li[level-2]").each(function() {
     		var current = $('li').css("background-color","red");
 	});
 	});
