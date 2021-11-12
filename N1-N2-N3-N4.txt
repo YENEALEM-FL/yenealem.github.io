@@ -1,0 +1,149 @@
+-------------------------------------------1-------------------------
+  NodeFolder\helloWorld.js
+  -------------
+ var http =require('http');
+ const { hostname } = require('os');
+ http.createServer(
+        function(req,res){
+        res.writeHead(200, {'Content-Type':'text/html'});
+        res.end('Hello World. This is my first page in Node-js.');
+        }).listen(8080);
+  
+======> It prints out "Hello World. This is my first page in Node-js."
+-------------------------------------------2-------------------------
+
+   NodeFolder/myModule.js
+   -------------
+ myDate = function() {
+    return Date();
+    };
+ exports.myDate = myDate;
+
+  
+   NodeFolder/helloWorld.js
+   -------------
+ var http = require('http');
+ var dt = require('./myModule');
+ http.createServer(function (req, res) {
+        res.writeHead(200, 
+        {'Content-Type': 'text/html'});
+        res.write("The date and time are currently: " + dt.myDate());
+        res.end();
+        }).listen(8080);
+
+======> It prints out the date information. For example:The date and time are currently: Thu Nov 11 2021 21:34:17 GMT-0600 (Central Standard Time) 
+-------------------------------------------3-------------------------
+
+
+   NodeFolder/myModule.js
+   ----------------------
+ myDate = function() {
+    return Date();
+    };
+ exports.myDate = myDate;
+
+  
+   NodeFolder/helloWorld.js
+   -----------------------
+
+ var http = require('http');
+ http.createServer(function (req, res) {
+ res.writeHead(200, {'Content-Type': 'text/html'});
+ res.write(req.url);
+ res.end();
+ }).listen(8080); 
+
+
+======> It prints out the file directory part of the URL.
+-------------------------------------------4-------------------------
+
+ AdderWebServer.js
+ -----------------
+ var http = require('http');
+ var url = require('url');
+ var fs = require('fs');
+ var addmod = require('./addMod.js');
+ http.createServer(function (req, res) {
+    var q = url.parse(req.url, true);
+    var filename = "." + q.pathname;
+    if (q.pathname == "/addMod.js")
+        addmod.add(req, res, q.query)
+    else
+        fs.readFile(filename, function (err, data) {
+            if (err) {
+                res.writeHead(404, { 'Content-Type': 'text/html' });
+                return res.end("404 Not Found");
+            }
+            res.writeHead(200); // Content-Type not included
+            res.write(data);
+            return res.end();
+        });
+ }).listen(8080);
+
+
+ addMod.js
+ ---------
+ module.exports.add = function (req,res,vals) {
+    var sum = parseInt(vals.first) + parseInt(vals.second);
+    var prod = parseInt(vals.first) * parseInt(vals.second);
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write("<!DOCTYPE html>");
+    res.write("<html>");
+    res.write("<head><meta charset=\"utf-8\"/>");
+    res.write("<title>Calculator Web Site</title>");
+    res.write("</head>");
+    res.write("<body>");
+    res.write("<h3> Result of computations(Addition and Multiplication)</h3>");
+    res.write("<p>The sum is: ");
+    res.write(String(sum)+"<br>");
+    res.write("<p> The product is:")
+    res.write(String(prod));
+    res.write("</p>");
+    res.write("</body>");
+    res.write("</html>");
+    return res.end();
+    };
+ 
+ 
+ SimpleAdder.html
+ ----------------
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <title> this page</title>
+ </head>
+ <body>
+ <form action ="http://localhost:8080/addMod.js">
+ <div><h4>Enter two numbers</h4>
+ <label>first number</label><br>
+ <input type = "text" name="first"/><br/><br>
+ <label>second number</label><br>
+ <input type = "text" name="second"/><br/><br>
+ <input type="submit" value="Click"/>
+ </div>
+ </form>
+ </body>
+ </html>
+
+======> The adder page (http://localhost:8080/SimpleAdder.html) form helps to enter two numbers to be added. Then, when the submit button gets clicked, the contents of the form will be submitted to addMod.js so that numeric comutations are done here. AddMod.js read submitted data from URL header (http://localhost:8080/addMod.js?first=10&second=11). These two processes are supported by he webserver which manages the request and response operations on http, url, and file.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
