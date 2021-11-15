@@ -1,4 +1,4 @@
-module.exports.add = function (req,res,vals) {
+module.exports.add = function (res,vals) {
      if(vals.operator=='addition'){
 	   var result = parseInt(vals.first) + parseInt(vals.second);
 	}

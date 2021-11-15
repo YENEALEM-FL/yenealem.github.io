@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+	$(document).ready(function(){
+		
+ 		 $("span").parentsUntil("div").css({"color": "green"});
+		
+});
+	
+
+</script>
+</head>
+<body>
+<div class="ancestors">
+ <div> (great-grandparent)
+ <ul> (grandparent)
+ <li> (direct parent)
+ <span>some text</span>
+ </li>
+ </ul>
+ </div>
+</div>
+</body>
+</html>

@@ -6,15 +6,14 @@
 $(document).ready(function(){
   $("p").click(function(){
 	var content=$("p:first").text();    
-    $("p:nth-child(3)").text(content);
+    $("p:nth-child(2)").text(content);
 	});
 
 2.
 
 $(document).ready(function(){
-	$("ul > li[level-2]").each(function() {
-    		var current = $('li').css("background-color","red");
-	});
+
+	$("ul.level-2 > li").css("background-color", "red");
 	});
 
 3.
