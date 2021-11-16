@@ -1,0 +1,67 @@
+
+body{
+	overflow: auto;
+	margin:0;
+}
+
+button{
+	font-size: 18px;
+}
+
+.pageTitle{
+	background-color:#b9b6b8;
+	overflow:auto;
+	padding:0px;
+
+   	margin:0px
+}
+
+
+#wordSearcher{
+	background-color:#dfd7dc;
+	overflow:auto;
+	padding:0;
+	margin:0;
+	height:40px;
+
+}
+
+.searcherAlignment{
+	background-color:#dfd7dc;
+	vertical-align: middle;
+	font-size: 24px;
+	padding:5px;
+}
+.wordSearched{
+
+	background-color:#ffffff;
+	overflow:auto;
+	padding:0;
+	margin:0
+}
+
+.number{
+	display: inline-block;
+	font-size: 16px;
+	color: #41a071;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	font-style: normal; 
+  }
+  .wordtype{
+	font-size: 14;
+	font-weight: bold;
+	font-style: oblique;
+  }
+  .search-result{
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px auto;
+    /* border: 1px solid blue; */
+}
+
+.search-result p{
+  padding: 5px 0px;
+  font-style: italic;
+}
